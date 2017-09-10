@@ -1,0 +1,111 @@
+
+$theme_yellow: #f5ea14;    
+$theme_blue:   #29a9e1;    
+$theme_white:  rgb(230,230,230); //#f9f9f9;       
+$theme_black:  rgb(25,25,25);    //#111111;  
+
+body {
+  background-color: $theme_black;
+
+  /* disable text selection */ 
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  ::selection {
+    background-color: $theme_black;
+    color: $theme_yellow;
+  }
+  .logo {
+    height: 92px;
+    width: 252px;
+    position: fixed;
+    top: 10px;
+    z-index: 0;
+  }
+  #logo-top {
+    z-index: 2; 
+  }
+  #arrow {
+    height: 81px;
+    position: fixed;
+    top: 43%;
+    opacity: 0;
+    z-index: 2;
+  }
+  #navigation {
+    list-style: none;
+    color: $theme_white;
+    margin-left: 110px;
+    margin-top: 200px;
+    a {
+      text-decoration: none;
+      color: $theme_white;
+    }
+    a:active {
+      color: rgb(10,10,10);
+    }
+    .nav-item {
+      font-family: 'Cubano-Regular';
+      font-size: 100px;
+      margin-bottom: 40px;
+    }
+  }
+  #bottom-canvas {
+    height: 100%;
+    width: 100%;
+    float: right;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    canvas {
+      cursor: default;
+      background-color: $theme_black;
+    }
+  }
+  #top-canvas {
+    height: 100%;
+    width: 100%;
+    float: right;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.8;
+    canvas {
+      cursor: default;
+    }
+  }
+  #about {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    color: white;
+    z-index: 1;
+    background-color: rgba(25,25,25,0.975);
+    overflow: scroll;
+  }
+  .heading {
+    margin-top: 200px;
+    margin-left: 200px;
+    font-family: sans-serif;
+    font-size: 40px;
+    color: $theme_blue;
+    border-bottom: 1px $theme_yellow dashed;
+    padding-bottom: 5px;
+  }
+  .about-text {
+    margin-top: 100px;
+    margin-left: 600px;
+    margin-right: 100px;
+    font-family: monospace;
+    font-size: 20px;
+  }
+}
